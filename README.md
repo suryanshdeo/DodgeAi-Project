@@ -104,16 +104,23 @@ Notes:
 
 ### Prerequisites
 
-- Python 3.11
+- Python 3.11+
 - Node.js 18+ and npm
 
-### 1. Install backend dependencies
+### 1. Create and activate a virtual environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 2. Install backend dependencies
 
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 2. Create a local environment file
+### 3. Create a local environment file
 
 ```bash
 echo "OPENROUTER_API_KEY=your_key_here" > .env
@@ -125,13 +132,13 @@ On Windows PowerShell:
 Set-Content .env "OPENROUTER_API_KEY=your_key_here"
 ```
 
-### 3. Start the backend
+### 4. Start the backend
 
 ```bash
 python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-### 4. Start the frontend in a second terminal
+### 5. Start the frontend in a second terminal
 
 ```bash
 cd frontend
@@ -139,7 +146,7 @@ npm install
 npm run dev
 ```
 
-### 5. Open the app
+### 6. Open the app
 
 Use:
 

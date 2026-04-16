@@ -107,11 +107,28 @@ Notes:
 - Python 3.11+
 - Node.js 18+ and npm
 
-### 1. Create and activate a virtual environment
+### 1. Create and activate a Python 3.11 virtual environment
+
+If your machine defaults to Python 3.14+, use `pyenv` first:
+
+```bash
+pyenv install 3.11.11
+pyenv local 3.11.11
+```
+
+Then create and activate the virtual environment:
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+On Windows PowerShell:
+
+```powershell
+venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 ```
 
 ### 2. Install backend dependencies
